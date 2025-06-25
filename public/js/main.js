@@ -35,7 +35,8 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         });
         const data = await res.json();
         if (data.token) {
-            alert('Login exitoso');
+            //alert('Login exitoso');
+            window.location.href = 'views/principal.html';
             localStorage.setItem('token', data.token);
         } else {
             alert(data.error);
